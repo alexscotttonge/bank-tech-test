@@ -6,4 +6,8 @@ class Bank
     @balance = 0
   end
 
+  def deposit(credit)
+    @balance += credit
+  end
+
 end
