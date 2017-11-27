@@ -22,4 +22,8 @@ As a user
 So I be a functioning member of society
 I want to open a bank account
 
+As a user
+So I can save money
+I want to be able to deposit money in the account
+
 ```
