@@ -6,8 +6,8 @@ class Statement
     @bank = bank
   end
 
-  def print_statement
-    bank.print_statement
+  def column_headers
+    { date: "Date", deposit: "Deposit", withdrawal: "Withdrawal", balance: "Balance" }
   end
 
 end

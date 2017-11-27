@@ -30,4 +30,8 @@ As a user
 So I can spend money
 I want to be able to withdraw cash
 
+As a user
+So I can track spending
+I want to be able to see my account statement
+
 ```
