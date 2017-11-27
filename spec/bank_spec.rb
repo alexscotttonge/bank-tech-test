@@ -4,8 +4,14 @@ describe Bank do
 
   let(:bank) { described_class.new }
 
-  it 'starts with a balance of zero' do
-    expect(bank.balance).to eq 0
+  describe '#initialize' do
+    it 'starts with a balance of zero' do
+      expect(bank.balance).to eq 0
+    end
+
+    it 'has an empty transactions array' do
+      expect(bank.transactions).to eq []
+    end
   end
 
   describe '#deposit' do
