@@ -1,6 +1,6 @@
 class Bank
 
-  attr_reader :balance
+  attr_reader :balance, :credit_date, :credit, :balance, :transaction
 
   def initialize
     @balance = 0
