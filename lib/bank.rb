@@ -22,6 +22,8 @@ class Bank
     "Deposit: £#{@credit}, Date: #{@credit_date}, Balance: £#{@balance}"
   end
 
-end
+  def withdrawal_statement
+    "Withdrawal: £#{@debit}, Date: #{@debit_date}, Balance: £#{@balance}"
+  end
 
-#"Withdrawal: £#{@debit}, Date: #{@debit_date}, Balance: #{@balance}"
+end
