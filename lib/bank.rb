@@ -1,10 +1,10 @@
 class Bank
 
-  attr_reader :balance, :credit_date, :credit, :balance, :transactions
+  attr_reader :balance, :credit_date, :credit, :balance, :store_transactions
 
   def initialize
     @balance = 0
-    @transactions = []
+    @store_transactions = []
   end
 
   def deposit(credit, credit_date)
@@ -20,7 +20,8 @@ class Bank
   end
 
   def print_statement
-    @transaction = { date: "#{@credit_date}", deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}"}
+    transactions = { date: "#{@credit_date}", deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}"}
+    @store_transactions << transactions
   end
 
 

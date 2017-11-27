@@ -10,7 +10,7 @@ describe Bank do
     end
 
     it 'has an empty transactions array' do
-      expect(bank.transactions).to eq []
+      expect(bank.store_transactions).to eq []
     end
   end
 
@@ -32,7 +32,7 @@ describe Bank do
   describe '#print_statement' do
     it 'prints an account deposit statement' do
       bank.deposit(1000, '2/2/18')
-      expect(bank.print_statement).to eq ({date: "2/2/18", deposit: "£1000", withdrawal: "", balance: "£1000"})
+      expect(bank.print_statement).to eq [{date: "2/2/18", deposit: "£1000", withdrawal: "", balance: "£1000"}]
     end
   end
 
