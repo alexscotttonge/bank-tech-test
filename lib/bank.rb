@@ -1,6 +1,6 @@
 class Bank
 
-  attr_reader :balance, :credit, :credit_date
+  attr_reader :balance
 
   def initialize
     @balance = 0
@@ -13,11 +13,13 @@ class Bank
   end
 
   def withdraw(debit, debit_date)
+    @debit = debit
+    @debit_date = debit_date
     @balance -= debit
   end
 
   def print_statement
-    "You deposited £#{@credit} on #{@credit_date},\nYou withdrew £500 on 3/2/18"
+    "You deposited £#{@credit} on #{@credit_date},\nYou withdrew £#{@debit} on #{@debit_date}"
   end
 
 end
