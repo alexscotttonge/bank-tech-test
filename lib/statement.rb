@@ -7,7 +7,8 @@ class Statement
   end
 
   def column_headers
-    { date: "Date", deposit: "Deposit", withdrawal: "Withdrawal", balance: "Balance" }
+    @col_headers = { date: "Date", deposit: "Deposit", withdrawal: "Withdrawal", balance: "Balance" }
+    @col_headers
   end
 
 end
