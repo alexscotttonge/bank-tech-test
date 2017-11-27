@@ -10,4 +10,8 @@ class Bank
     @balance += credit
   end
 
+  def withdraw(debit)
+    @balance -= debit
+  end
+
 end

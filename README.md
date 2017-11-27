@@ -24,6 +24,10 @@ I want to open a bank account
 
 As a user
 So I can save money
-I want to be able to deposit money in the account
+I want to be able to deposit cash in the account
+
+As a user
+So I can spend money
+I want to be able to withdraw cash
 
 ```
