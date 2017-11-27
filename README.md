@@ -19,7 +19,7 @@ date || credit || debit || balance
 
 ```
 As a user
-So I be a functioning member of society
+So I can be a functioning member of society
 I want to open a bank account
 
 As a user

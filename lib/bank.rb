@@ -1,12 +1,14 @@
 class Bank
 
-  attr_reader :balance
+  attr_reader :balance, :credit, :credit_date
 
   def initialize
     @balance = 0
   end
 
-  def deposit(credit, date)
+  def deposit(credit, credit_date)
+    @credit = credit
+    @credit_date = credit_date
     @balance += credit
   end
 
@@ -15,7 +17,7 @@ class Bank
   end
 
   def print_statement
-    "You deposited £1000 on 2/2/18"
+    "You deposited £#{@credit} on #{@credit_date}"
   end
 
 end
