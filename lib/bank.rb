@@ -18,12 +18,10 @@ class Bank
     @balance -= debit
   end
 
-  def deposit_statement
-    "Deposit: £#{@credit}, Date: #{@credit_date}, Balance: £#{@balance}"
+  def print_statement
+    "#{@credit_date}, £#{@credit}, £#{@balance}"
   end
 
-  def withdrawal_statement
-    "Withdrawal: £#{@debit}, Date: #{@debit_date}, Balance: £#{@balance}"
-  end
+
 
 end

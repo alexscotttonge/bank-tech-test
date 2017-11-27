@@ -23,19 +23,13 @@ describe Bank do
     end
   end
 
-  describe '#deposit_statement' do
+  describe '#print_statement' do
     it 'prints an account deposit statement' do
       bank.deposit(1000, '2/2/18')
-      expect(bank.deposit_statement).to eq "Deposit: £1000, Date: 2/2/18, Balance: £1000"
+      expect(bank.print_statement).to eq "2/2/18, £1000, £1000"
     end
   end
 
-  describe '#withdrawal_statement' do
-    it 'prints a withdrawal statement' do
-      bank.deposit(1000, '2/2/18')
-      bank.withdraw(500, '3/2/18')
-      expect(bank.withdrawal_statement).to eq "Withdrawal: £500, Date: 3/2/18, Balance: £500"
-    end
-  end
+
 
 end
