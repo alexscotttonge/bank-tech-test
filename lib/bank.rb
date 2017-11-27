@@ -19,7 +19,7 @@ class Bank
   end
 
   def print_statement
-    @transaction = "#{@credit_date}, £#{@credit}, £#{@balance}"
+    @transaction = { date: "#{@credit_date}", deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}"}
     @transaction
   end
 
