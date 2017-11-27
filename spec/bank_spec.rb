@@ -36,6 +36,10 @@ describe Bank do
     end
   end
 
+  it 'has a column header hash' do
+    expect(bank.column_headers).to eq ({ date: "Date", deposit: "Deposit", withdrawal: "Withdrawal", balance: "Balance" })
+  end
+
 
 
 end
