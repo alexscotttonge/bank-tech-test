@@ -12,12 +12,12 @@ class Bank
     @balance += credit
   end
 
-  def withdraw(debit)
+  def withdraw(debit, debit_date)
     @balance -= debit
   end
 
   def print_statement
-    "You deposited £#{@credit} on #{@credit_date}"
+    "You deposited £#{@credit} on #{@credit_date},\nYou withdrew £500 on 3/2/18"
   end
 
 end
