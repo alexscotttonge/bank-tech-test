@@ -15,6 +15,10 @@ date || credit || debit || balance
 
 ##How to run
 
+```
+irb
+```
+
 ##User stories
 
 ```
@@ -35,3 +39,6 @@ So I can track spending
 I want to be able to see my account statement
 
 ```
+
+##Notes
+- need to add functionality to print a table
