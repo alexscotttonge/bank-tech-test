@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/alexscotttonge/bank-tech-test.svg?branch=master)](https://travis-ci.org/alexscotttonge/bank-tech-test)
+
 #Challenge
 
 **Given** a client makes a deposit of 1000 on 10-01-2012  
