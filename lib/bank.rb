@@ -20,7 +20,7 @@ class Bank
   end
 
   def print_statement
-    transactions = { date: "#{@credit_date}", deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}"}
+    transactions = { date: "#{@credit_date}", deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
     @store_transactions << transactions
   end
 
@@ -28,7 +28,5 @@ class Bank
     @col_headers = { date: "Date", deposit: "Deposit", withdrawal: "Withdrawal", balance: "Balance" }
     @col_headers
   end
-
-
 
 end
