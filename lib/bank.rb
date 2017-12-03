@@ -33,7 +33,8 @@ class Bank
   end
 
   def print_transactions
-    "date || credit || debit || balance\n03/12/2017||£1000||||£1000"
+    puts statement.header
+    puts statement.print_statement(store_transactions)
   end
 
 end

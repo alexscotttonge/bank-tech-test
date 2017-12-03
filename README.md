@@ -43,4 +43,4 @@ I want to be able to see my account statement
 ```
 
 ##Notes
-- need to add functionality to print a table
+- further work on testing Bank to test print statement method

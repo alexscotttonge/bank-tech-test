@@ -10,7 +10,7 @@ class Statement
 
   def print_statement(store_transactions)
     store_transactions.map do |transaction|
-      transaction.values.join( '||')
+      transaction.values.join('||')
     end
   end
 

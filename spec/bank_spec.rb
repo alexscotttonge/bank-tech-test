@@ -12,7 +12,7 @@ describe Bank do
 
     def print_statement(store_transactions)
       store_transactions.map do |transaction|
-        transaction.values.join( '||')
+        transaction.values.join('||')
       end
     end
 
@@ -62,6 +62,7 @@ describe Bank do
   describe '#print_transactions' do
     it 'prints a list of transactions' do
       bank.deposit(1000)
+      bank.withdraw(500)
       expect(bank.print_transactions).to eq "date || credit || debit || balance\n03/12/2017||£1000||||£1000"
     end
   end

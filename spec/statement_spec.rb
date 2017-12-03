@@ -28,10 +28,6 @@ describe Statement do
       store_transactions.push(transaction)
     end
 
-    def print_headers
-      statement.column_headers
-    end
-
     def print_date
       date = Date.today
       date.strftime("%d/%m/%Y")
@@ -41,7 +37,6 @@ describe Statement do
 
   let(:bank) { BankDouble.new(statement) }
   let(:statement) { described_class.new }
-
 
   describe '#print_statment' do
     it 'can print a bank statement' do
