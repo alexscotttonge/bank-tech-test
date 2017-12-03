@@ -42,11 +42,6 @@ describe Statement do
   let(:bank) { BankDouble.new(statement) }
   let(:statement) { described_class.new }
 
-  describe '#column_headers' do
-    it 'has a column header hash' do
-      expect(statement.column_headers).to eq 'date || credit || debit || balance'
-    end
-  end
 
   describe '#print_statment' do
     it 'can print a bank statement' do

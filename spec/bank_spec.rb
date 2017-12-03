@@ -4,14 +4,14 @@ describe Bank do
 
   class StatementDouble
 
-    attr_reader :bank
-
-    def initialize
-      @bank = bank
-    end
-
     def column_headers
       "date || credit || debit || balance"
+    end
+
+    def print_statement(store_transactions)
+      store_transactions.map do |transaction|
+        transaction.values.join( '||')
+      end
     end
 
   end

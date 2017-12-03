@@ -2,8 +2,10 @@ require_relative 'bank'
 
 class Statement
 
-  def column_headers
-    "date || credit || debit || balance"
+  attr_reader :header
+
+  def initialize
+    @header = "date || credit || debit || balance"
   end
 
   def print_statement(store_transactions)
