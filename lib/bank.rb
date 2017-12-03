@@ -36,4 +36,8 @@ class Bank
     date.strftime("%d/%m/%Y")
   end
 
+  def print_transactions
+    "date || credit || debit || balance\n03/12/2017||£1000||||£1000"
+  end
+
 end

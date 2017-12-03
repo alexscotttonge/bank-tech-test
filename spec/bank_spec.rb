@@ -63,4 +63,11 @@ describe Bank do
     end
   end
 
+  describe '#print_transactions' do
+    it 'prints a list of transactions' do
+      bank.deposit(1000)
+      expect(bank.print_transactions).to eq "date || credit || debit || balance\n03/12/2017||£1000||||£1000"
+    end
+  end
+
 end
