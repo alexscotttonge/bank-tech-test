@@ -15,15 +15,17 @@ describe Statement do
     def deposit(credit)
       @credit = credit
       @balance += credit
+      store_transaction({ date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
     end
 
     def withdraw(debit)
       @debit = debit
       @balance -= debit
+      store_transaction({ date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
     end
 
-    def transactions
-      store_transactions << { date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
+    def store_transaction(transaction)
+      store_transactions.push(transaction)
     end
 
     def print_headers
@@ -48,7 +50,8 @@ describe Statement do
 
   describe '#print_statment' do
     it 'can print a bank statement' do
-      expect(statement.print_statement(bank.store_transactions)).to eq '03/12/2017 || £0 || £0 || £0'
+      bank.deposit(1000)
+      expect(statement.print_statement(bank.store_transactions)).to eq ["03/12/2017||£1000||||£1000"]
     end
   end
 

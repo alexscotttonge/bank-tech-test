@@ -19,8 +19,8 @@ class Bank
 
   def withdraw(debit)
     @debit = debit
-    store_transaction({ date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
     @balance -= debit
+    store_transaction({ date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
   end
 
   def store_transaction(transaction)

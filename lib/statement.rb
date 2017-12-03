@@ -7,7 +7,9 @@ class Statement
   end
 
   def print_statement(store_transactions)
-    "03/12/2017 || £0 || £0 || £0"
+    store_transactions.map do |transaction|
+      transaction.values.join( '||')
+    end
   end
 
 end
