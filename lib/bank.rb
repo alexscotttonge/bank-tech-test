@@ -13,9 +13,8 @@ class Bank
     @balance += credit
   end
 
-  def withdraw(debit, debit_date)
+  def withdraw(debit)
     @debit = debit
-    @debit_date = debit_date
     @balance -= debit
   end
 
