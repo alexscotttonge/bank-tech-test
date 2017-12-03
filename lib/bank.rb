@@ -21,8 +21,7 @@ class Bank
   end
 
   def print_statement
-    transactions = { deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
-    @store_transactions << transactions
+    store_transactions << { deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
   end
 
   def print_headers
