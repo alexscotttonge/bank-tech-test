@@ -8,9 +8,8 @@ class Bank
     @statement = statement
   end
 
-  def deposit(credit, credit_date)
+  def deposit(credit)
     @credit = credit
-    @credit_date = credit_date
     @balance += credit
   end
 
@@ -21,7 +20,7 @@ class Bank
   end
 
   def print_statement
-    transactions = { date: "#{@credit_date}", deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
+    transactions = { deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
     @store_transactions << transactions
   end
 
