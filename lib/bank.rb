@@ -20,7 +20,7 @@ class Bank
     @balance -= debit
   end
 
-  def print_statement
+  def transactions
     store_transactions << { deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
   end
 

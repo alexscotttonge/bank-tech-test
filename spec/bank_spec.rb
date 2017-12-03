@@ -47,7 +47,7 @@ describe Bank do
   describe '#print_statement' do
     it 'prints an account deposit statement' do
       bank.deposit(1000)
-      expect(bank.print_statement).to eq [{ deposit: "£1000", withdrawal: "", balance: "£1000" }]
+      expect(bank.transactions).to eq [{ deposit: "£1000", withdrawal: "", balance: "£1000" }]
     end
   end
 
