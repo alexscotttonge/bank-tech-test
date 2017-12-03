@@ -2,7 +2,22 @@ require 'bank'
 
 describe Bank do
 
-  let(:bank) { described_class.new }
+  class StatementDouble
+
+    attr_reader :bank
+
+    def initialize
+      @bank = bank
+    end
+
+    def column_headers
+      "date || credit || debit || balance"
+    end
+
+  end
+
+  let(:statement) { StatementDouble.new }
+  let(:bank) { described_class.new(statement) }
 
   describe '#initialize' do
     it 'starts with a balance of zero' do

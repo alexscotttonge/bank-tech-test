@@ -2,7 +2,7 @@ class Bank
 
   attr_reader :balance, :credit_date, :credit, :balance, :store_transactions
 
-  def initialize
+  def initialize(statement)
     @balance = 0
     @store_transactions = []
   end

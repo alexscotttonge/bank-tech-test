@@ -2,7 +2,7 @@ class Statement
 
   attr_reader :bank
 
-  def initialize(bank)
+  def initialize
     @bank = bank
   end
 
