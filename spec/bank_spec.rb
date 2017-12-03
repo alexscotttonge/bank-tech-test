@@ -51,9 +51,9 @@ describe Bank do
     end
   end
 
-  it 'has a column header hash' do
-    expect(bank.print_headers).to eq "date || credit || debit || balance"
-  end
+    it 'has a column header hash' do
+      expect(bank.print_headers).to eq "date || credit || debit || balance"
+    end
 
   describe '#date' do
     it 'has a method to print the date' do

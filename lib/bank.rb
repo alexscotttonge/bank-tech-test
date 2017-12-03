@@ -1,4 +1,5 @@
 require 'date'
+require_relative 'statement'
 
 class Bank
 
