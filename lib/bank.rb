@@ -1,10 +1,11 @@
 class Bank
 
-  attr_reader :balance, :credit_date, :credit, :balance, :store_transactions
+  attr_reader :balance, :credit_date, :credit, :balance, :store_transactions, :statement
 
   def initialize(statement)
     @balance = 0
     @store_transactions = []
+    @statement = statement
   end
 
   def deposit(credit, credit_date)
@@ -24,9 +25,8 @@ class Bank
     @store_transactions << transactions
   end
 
-  def column_headers
-    @col_headers = { date: "Date", deposit: "Deposit", withdrawal: "Withdrawal", balance: "Balance" }
-    @col_headers
+  def print_headers
+    statement.column_headers
   end
 
 end
