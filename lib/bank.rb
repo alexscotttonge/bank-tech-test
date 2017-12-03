@@ -27,4 +27,8 @@ class Bank
     statement.column_headers
   end
 
+  def date
+    "3/12/17"
+  end
+
 end

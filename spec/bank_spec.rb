@@ -55,4 +55,10 @@ describe Bank do
     expect(bank.print_headers).to eq "date || credit || debit || balance"
   end
 
+  describe '#date' do
+    it 'has a method to print the date' do
+      expect(bank.date).to eq '3/12/17'
+    end
+  end
+
 end
