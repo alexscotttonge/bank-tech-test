@@ -21,14 +21,14 @@ class Bank
   end
 
   def transactions
-    store_transactions << { deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
+    store_transactions << { date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
   end
 
   def print_headers
     statement.column_headers
   end
 
-  def date
+  def print_date
     date = Date.today
     date.strftime("%d/%m/%Y")
   end

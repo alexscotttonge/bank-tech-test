@@ -47,7 +47,7 @@ describe Bank do
   describe '#print_statement' do
     it 'prints an account deposit statement' do
       bank.deposit(1000)
-      expect(bank.transactions).to eq [{ deposit: "£1000", withdrawal: "", balance: "£1000" }]
+      expect(bank.transactions).to eq [{ date: '03/12/2017', deposit: "£1000", withdrawal: "", balance: "£1000" }]
     end
   end
 
@@ -57,7 +57,7 @@ describe Bank do
 
   describe '#date' do
     it 'has a method to print the date' do
-      expect(bank.date).to eq '03/12/2017'
+      expect(bank.print_date).to eq '03/12/2017'
     end
   end
 
