@@ -1,3 +1,5 @@
+require 'date'
+
 class Bank
 
   attr_reader :balance, :credit_date, :credit, :balance, :store_transactions, :statement
@@ -28,7 +30,8 @@ class Bank
   end
 
   def date
-    "3/12/17"
+    date = Date.today
+    date.strftime("%d/%m/%Y")
   end
 
 end

@@ -57,7 +57,7 @@ describe Bank do
 
   describe '#date' do
     it 'has a method to print the date' do
-      expect(bank.date).to eq '3/12/17'
+      expect(bank.date).to eq '03/12/2017'
     end
   end
 
