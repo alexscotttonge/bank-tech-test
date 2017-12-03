@@ -10,7 +10,7 @@ describe Statement do
   let(:statement) { described_class.new(bank) }
 
   it 'has a column header hash' do
-    expect(statement.column_headers).to eq ({ date: "Date", deposit: "Deposit", withdrawal: "Withdrawal", balance: "Balance" })
+    expect(statement.column_headers).to eq "date || credit || debit || balance"
   end
 
 end
