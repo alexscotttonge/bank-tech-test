@@ -7,7 +7,7 @@ class Statement
   end
 
   def print_statement(store_transactions)
-    '03/12/2017 || £0 || £0 || £0'
+    "03/12/2017 || £0 || £0 || £0"
   end
 
 end

@@ -44,16 +44,18 @@ describe Bank do
     end
   end
 
-  describe '#print_statement' do
+  describe '#store_transaction' do
     it 'prints an account deposit statement' do
       bank.deposit(1000)
-      expect(bank.transactions).to eq [{ date: '03/12/2017', deposit: "£1000", withdrawal: "", balance: "£1000" }]
+      expect(bank.store_transactions).to eq [{ date: '03/12/2017', deposit: "£1000", withdrawal: "", balance: "£1000" }]
     end
   end
 
+  describe '#print_headers' do
     it 'has a column header hash' do
       expect(bank.print_headers).to eq "date || credit || debit || balance"
     end
+  end
 
   describe '#date' do
     it 'has a method to print the date' do

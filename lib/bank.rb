@@ -14,15 +14,17 @@ class Bank
   def deposit(credit)
     @credit = credit
     @balance += credit
+    store_transaction({ date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
   end
 
   def withdraw(debit)
     @debit = debit
+    store_transaction({ date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
     @balance -= debit
   end
 
-  def transactions
-    store_transactions << { date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" }
+  def store_transaction(transaction)
+    store_transactions.push(transaction)
   end
 
   def print_headers
