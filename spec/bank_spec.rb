@@ -4,8 +4,10 @@ describe Bank do
 
   class StatementDouble
 
-    def column_headers
-      "date || credit || debit || balance"
+    attr_reader :header
+
+    def initialize
+      @header = "date || credit || debit || balance"
     end
 
     def print_statement(store_transactions)
@@ -48,12 +50,6 @@ describe Bank do
     it 'prints an account deposit statement' do
       bank.deposit(1000)
       expect(bank.store_transactions).to eq [{ date: '03/12/2017', deposit: "£1000", withdrawal: "", balance: "£1000" }]
-    end
-  end
-
-  describe '#print_headers' do
-    it 'has a column header hash' do
-      expect(bank.print_headers).to eq "date || credit || debit || balance"
     end
   end
 

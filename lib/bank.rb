@@ -14,7 +14,7 @@ class Bank
   def deposit(credit)
     @credit = credit
     @balance += credit
-    store_transaction({ date: print_date, deposit: "£#{@credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
+    store_transaction({ date: print_date, deposit: "£#{credit}", withdrawal: "#{@debit}", balance: "£#{@balance}" })
   end
 
   def withdraw(debit)
@@ -25,10 +25,6 @@ class Bank
 
   def store_transaction(transaction)
     store_transactions.push(transaction)
-  end
-
-  def print_headers
-    statement.column_headers
   end
 
   def print_date
