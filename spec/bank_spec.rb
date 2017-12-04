@@ -20,6 +20,7 @@ describe Bank do
 
   let(:statement) { StatementDouble.new }
   let(:bank) { described_class.new(statement) }
+  let(:date) { Date.today.strftime("%d/%m/%Y")}
 
   describe '#initialize' do
     it 'starts with a balance of zero' do
@@ -49,13 +50,13 @@ describe Bank do
   describe '#store_transaction' do
     it 'prints an account deposit statement' do
       bank.deposit(1000)
-      expect(bank.store_transactions).to eq [{ date: '03/12/2017', deposit: "£1000", withdrawal: "", balance: "£1000" }]
+      expect(bank.store_transactions).to eq [{ date: "#{date}", deposit: "£1000", withdrawal: "", balance: "£1000" }]
     end
   end
 
   describe '#date' do
     it 'has a method to print the date' do
-      expect(bank.print_date).to eq '03/12/2017'
+      expect(bank.print_date).to eq "#{date}"
     end
   end
 
@@ -63,7 +64,7 @@ describe Bank do
     it 'prints a list of transactions' do
       bank.deposit(1000)
       bank.withdraw(500)
-      expect(bank.print_transactions).to eq "date || credit || debit || balance\n03/12/2017||£1000||||£1000"
+      expect(bank.print_transactions).to eq "date || credit || debit || balance\n#{date}||£1000||||£1000"
     end
   end
 

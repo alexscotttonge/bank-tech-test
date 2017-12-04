@@ -37,11 +37,12 @@ describe Statement do
 
   let(:bank) { BankDouble.new(statement) }
   let(:statement) { described_class.new }
+  let(:date) { Date.today.strftime("%d/%m/%Y")}
 
   describe '#print_statment' do
     it 'can print a bank statement' do
       bank.deposit(1000)
-      expect(statement.print_statement(bank.store_transactions)).to eq ["03/12/2017||£1000||||£1000"]
+      expect(statement.print_statement(bank.store_transactions)).to eq ["#{date}||£1000||||£1000"]
     end
   end
 
